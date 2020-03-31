@@ -1,37 +1,54 @@
-/* pages/operatstep/operatstep.wxss */
-.swiper-tab {
-  width: 100%;
-  border-bottom: 2rpx solid #ccc;
-  text-align: center;
-  height: 88rpx;
-  line-height: 88rpx;
+.navBar {
   display: flex;
-  flex-flow: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  height: 100rpx;
+  position: relative;
+  background: #fff;
 }
 
-.swiper-tab-item {
-  width: 30%;
-  color: #434343;
+.navItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 4rpx solid transparent;
 }
 
 .active {
-  color: #00C25F;
-  border-bottom: 4rpx solid #00C25F;
+  color: #00c25f;
+  border-bottom: 4rpx solid #00c25f;
 }
 
-swiper {
+.content_wrapper{
+  flex: 1;
+}
+.step{
+  width: 200rpx;
+  color: white;
+  text-align: center;
+  margin: 35rpx auto;
+  border-radius: 23rpx;
+  background: #00c25f;
+}
+.boxtitle{
   text-align: center;
 }
+.boximg.pl100{ padding-left: 100rpx}
+.boximg.pl150{ padding-left: 150rpx}
 
-.step{
-  width: 30%;
-  margin: 62rpx auto 30rpx;
-  background: #00c25f;
-  color: white;
-  border-radius: 20rpx;
-}
+.c1 { width: 350rpx; height: 462rpx;}
+.c2 { width: 350rpx; height: 470rpx;}
+.c3 { width: 730rpx; height: 364rpx}
+.c4 { width: 320rpx; height: 390rpx;}
+.c5 { width: 350rpx; height: 450rpx;}
 
-.boximg{
-  border: 1rpx solid ;
-}
+
+.c1-1 { width: 410rpx; height: 410rpx;}
+.c1-2 { width: 500rpx; height:300rpx;}
+.c1-3 { width: 750rpx; height:360rpx;}
+.c1-4 { width: 520rpx; height:320rpx;}
+.c1-5 { width: 320rpx; height:400rpx;}
+
+.c2-1{width: 380rpx; height:460rpx;}
+.c2-2{width: 420rpx; height:510rpx;}
+.c2-3{width: 350rpx; height:480rpx;}
+.c2-4{width: 550rpx; height:500rpx;}

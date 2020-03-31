@@ -2,37 +2,23 @@
 var app = getApp()
 
 Page({
-  data: {
-    currentTab: 0
-  },
-  onLoad: function (options) {
-    // 页面初始化 options为页面跳转所带来的参数
-
-  },
-  //滑动切换
-  swiperTab: function (e) {
-    var that = this;
-    that.setData({
-      currentTab: e.detail.current
-    });
-  },
-  //点击切换
-  clickTab: function (e) {
-    var that = this;
-    if (this.data.currentTab === e.target.dataset.current) {
-      return false;
-    } else {
-      that.setData({
-        currentTab: e.target.dataset.current
-      })
-    }
-  },
   /**
    * 页面的初始数据
+   * tabs:tab栏的栏目名
+   * tabIndex:当前tab所在的index
    */
   data: {
-
+    tabs: ['柜式陪护床', '椅式陪护床', '远程操作流程'],
+    tabIndex: 0,
   },
+  // 处理点击tab
+  onTabClick(e) {
+    let id = e.currentTarget.id;
+    this.setData({
+      tabIndex: id,
+    })
+  },
+
 
   /**
    * 生命周期函数--监听页面加载

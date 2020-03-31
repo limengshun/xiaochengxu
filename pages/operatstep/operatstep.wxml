@@ -1,19 +1,94 @@
-<!--pages/operatstep/operatstep.wxml-->
-<!-- <text>pages/operatstep/operatstep.wxml</text> -->
-<view class="swiper-tab">
-    <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">柜式陪护床</view>
-    <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">椅式陪护床</view>
-    <view class="swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">远程操作流程</view>
-</view>
-
-<swiper current="{{currentTab}}" duration="300"  bindchange="swiperTab">
-    <swiper-item >
-    <view class="step">步骤一</view>
-    <view class="boxtitle">打开微信,扫描二维码注册</view>
-    <view class="boximg">
-    <image src="/static/img/c0-1.jpg"></image>
+<view class="page">
+    <!-- 导航条.tab太多的时候需要使用scrollview -->
+    <view class="navBar">
+      <block wx:for="{{tabs}}" wx:key="item">
+        <view id="{{index}}" class="navItem {{tabIndex == index ? 'active' : '' }}" bindtap="onTabClick">
+          <view class="navItemTitle">{{item}}</view>
+        </view>
+      </block>
     </view>
-    </swiper-item>
-    <swiper-item><view class="step">椅式陪护床</view></swiper-item>
-    <swiper-item><view class="step">远程操作流程</view></swiper-item>
-</swiper>
+  
+    <!-- 内容区域 -->
+    <view class="content_wrapper">
+      <!-- 第一个tab -->
+      <block wx:if="{{tabIndex == 0}}">
+        <view class='step'>步骤一</view>
+        <view class='boxtitle'>打开微信，扫二维码注册使用</view>
+        <view class='boximg pl150'>
+          <image src='/static/img/c0-1.jpg' class='c1'></image>
+        </view>
+        <view class='step'>步骤二</view>
+        <view class='boxtitle'>指示灯亮起，弹出部分柜体，向外拉开即可使用并开始计费</view>
+        <view class='boximg pl150'>
+          <image src='/static/img/c0-2.jpg' class='c2'></image>
+        </view>
+        <view class='step'>步骤三</view>
+        <view class='boxtitle'>使用完毕，向上拉起收床结并往里推动柜门至箱体内</view>
+        <view class='boximg'>
+          <image src='/static/img/c0-3.jpg' class='c3'></image>
+        </view>
+        <view class='step'>步骤四</view>
+        <view class='boxtitle'>向下按压盖板关锁，指示灯亮起，关锁成功，完成使用并计费结束</view>
+        <view class='boximg pl150'>
+          <image src='/static/img/c0-4.jpg' class='c4'></image>
+        </view>
+        <view class='step'>步骤五</view>
+        <view class='boxtitle'>进入康保小程序“使用记录”确认订单结束</view>
+        <view class='boximg pl150'>
+          <image src='/static/img/c0-5.jpg' class='c5'></image>
+        </view>
+      </block>
+  
+      <!-- 第二个tab -->
+      <block wx:if="{{tabIndex == 1}}">
+        <view class='step'>步骤一</view>
+    <view class='boxtitle'>打开微信，扫二维码注册使用</view>
+    <view class='boximg pl150'>
+      <image src='/static/img/c1-1.jpg' class='c1-1'></image>
+    </view>
+    <view class='step'>步骤二</view>
+    <view class='boxtitle'>指示灯亮起，盖板上翻开锁，向上提起床尾再向外拉开即可使用并开始计费</view>
+    <view class='boximg pl150'>
+      <image src='/static/img/c1-2.jpg' class='c1-2'></image>
+    </view>
+    <view class='step'>步骤三</view>
+    <view class='boxtitle'>使用完毕，向上拉起收床结并往里推动</view>
+    <view class='boximg'>
+      <image src='/static/img/c1-3.jpg' class='c1-3'></image>
+    </view>
+    <view class='step'>步骤四</view>
+    <view class='boxtitle'>抬起床尾往里推动到位后放入定位卡槽，向下按压盖板关锁，指示灯亮起，关锁成功，完成使用并计费结束</view>
+    <view class='boximg pl150'>
+      <image src='/static/img/c1-4.jpg' class='c1-4'></image>
+    </view>
+    <view class='step'>步骤五</view>
+    <view class='boxtitle'>进入康保小程序“使用记录”确认订单结束</view>
+    <view class='boximg pl150'>
+      <image src='/static/img/c1-5.jpg' class='c1-5'></image>
+    </view>
+      </block>
+  
+      <!-- 第三个tab -->
+      <block wx:if="{{tabIndex == 2}}">
+        <view class='step'>步骤一</view>
+    <view class='boximg pl150'>
+      <image src='/static/img/c2-1.jpg' class='c2-1'></image>
+    </view>
+    <view class='step'>步骤二</view>
+    <view class='boxtitle'></view>
+    <view class='boximg pl150'>
+      <image src='/static/img/c2-2.jpg' class='c2-2'></image>
+    </view>
+    <view class='step'>步骤三</view>
+    <view class='boxtitle'></view>
+    <view class='boximg pl150'>
+      <image src='/static/img/c2-3.jpg' class='c2-3'></image>
+    </view>
+    <view class='step'>步骤四</view>
+    <view class='boxtitle'></view>
+    <view class='boximg pl150'>
+      <image src='/static/img/c2-4.jpg' class='c2-4'></image>
+    </view>
+      </block>
+    </view>
+  </view>
