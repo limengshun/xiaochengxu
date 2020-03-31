@@ -1,0 +1,37 @@
+/* pages/operatstep/operatstep.wxss */
+.swiper-tab {
+  width: 100%;
+  border-bottom: 2rpx solid #ccc;
+  text-align: center;
+  height: 88rpx;
+  line-height: 88rpx;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.swiper-tab-item {
+  width: 30%;
+  color: #434343;
+}
+
+.active {
+  color: #00C25F;
+  border-bottom: 4rpx solid #00C25F;
+}
+
+swiper {
+  text-align: center;
+}
+
+.step{
+  width: 30%;
+  margin: 62rpx auto 30rpx;
+  background: #00c25f;
+  color: white;
+  border-radius: 20rpx;
+}
+
+.boximg{
+  border: 1rpx solid ;
+}

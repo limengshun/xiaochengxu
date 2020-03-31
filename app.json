@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/operatstep/operatstep",
+    "pages/home/home",
+    "pages/useRecord/useRecord",
+    "pages/my/my"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "康保",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "tabBar": {
+    "backgrobnd": "#FFFFFF",
+    "selectedColor": "#00C25F",
+    "color": "#999999",
+    "borderStyle": "white",
+    "list": [{
+        "pagePath": "pages/home/home",
+        "iconPath": "static/img/nav_l_1.png",
+        "selectedIconPath": "static/img/nav_h_1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/operatstep/operatstep",
+        "iconPath": "static/img/nav_l_2.png",
+        "selectedIconPath": "static/img/nav_h_2.png",
+        "text": "操作流程"
+      },
+      {
+        "pagePath": "pages/useRecord/useRecord",
+        "iconPath": "static/img/nav_l_3.png",
+        "selectedIconPath": "static/img/nav_h_3.png",
+        "text": "使用记录"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "static/img/nav_l_4.png",
+        "selectedIconPath": "static/img/nav_h_4.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
